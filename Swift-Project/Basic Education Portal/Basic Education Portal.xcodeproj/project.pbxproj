@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AC3998D28D1873300D8691A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3998C28D1873300D8691A /* main.swift */; };
+		7AC3999A28D1887200D8691A /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3999928D1887200D8691A /* Students.swift */; };
+		7AC3999C28D18C2D00D8691A /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3999B28D18C2D00D8691A /* Accounts.swift */; };
+		7AC3999E28D18CB200D8691A /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3999D28D18CB200D8691A /* Courses.swift */; };
+		7AC399A028D18CC300D8691A /* StudentsTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3999F28D18CC300D8691A /* StudentsTranscript.swift */; };
+		7AC399A428D1BF1C00D8691A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC399A328D1BF1C00D8691A /* LoginView.swift */; };
+		7AC399A628D2FE1500D8691A /* MainMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC399A528D2FE1500D8691A /* MainMenuOptions.swift */; };
+		7AC399A828D3EE5B00D8691A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC399A728D3EE5B00D8691A /* Functions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7AC3998728D1873300D8691A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7AC3998928D1873300D8691A /* Basic Education Portal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Basic Education Portal"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC3998C28D1873300D8691A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7AC3999328D187D100D8691A /* Students.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Students.txt; path = ../../Students.txt; sourceTree = "<group>"; };
+		7AC3999428D187D200D8691A /* Accounts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Accounts.txt; path = ../../Accounts.txt; sourceTree = "<group>"; };
+		7AC3999528D187D200D8691A /* StudentsCourses.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StudentsCourses.txt; path = ../../StudentsCourses.txt; sourceTree = "<group>"; };
+		7AC3999628D187D200D8691A /* Courses.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Courses.txt; path = ../../Courses.txt; sourceTree = "<group>"; };
+		7AC3999928D1887200D8691A /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
+		7AC3999B28D18C2D00D8691A /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		7AC3999D28D18CB200D8691A /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		7AC3999F28D18CC300D8691A /* StudentsTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTranscript.swift; sourceTree = "<group>"; };
+		7AC399A328D1BF1C00D8691A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7AC399A528D2FE1500D8691A /* MainMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuOptions.swift; sourceTree = "<group>"; };
+		7AC399A728D3EE5B00D8691A /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AC3998628D1873300D8691A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AC3998028D1873300D8691A = {
+			isa = PBXGroup;
+			children = (
+				7AC3998B28D1873300D8691A /* Basic Education Portal */,
+				7AC3998A28D1873300D8691A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AC3998A28D1873300D8691A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AC3998928D1873300D8691A /* Basic Education Portal */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AC3998B28D1873300D8691A /* Basic Education Portal */ = {
+			isa = PBXGroup;
+			children = (
+				7AC3999428D187D200D8691A /* Accounts.txt */,
+				7AC3999628D187D200D8691A /* Courses.txt */,
+				7AC3999328D187D100D8691A /* Students.txt */,
+				7AC3999528D187D200D8691A /* StudentsCourses.txt */,
+				7AC3999B28D18C2D00D8691A /* Accounts.swift */,
+				7AC3999D28D18CB200D8691A /* Courses.swift */,
+				7AC3999F28D18CC300D8691A /* StudentsTranscript.swift */,
+				7AC399A328D1BF1C00D8691A /* LoginView.swift */,
+				7AC399A728D3EE5B00D8691A /* Functions.swift */,
+				7AC399A528D2FE1500D8691A /* MainMenuOptions.swift */,
+				7AC3999928D1887200D8691A /* Students.swift */,
+				7AC3998C28D1873300D8691A /* main.swift */,
+			);
+			path = "Basic Education Portal";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AC3998828D1873300D8691A /* Basic Education Portal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC3999028D1873300D8691A /* Build configuration list for PBXNativeTarget "Basic Education Portal" */;
+			buildPhases = (
+				7AC3998528D1873300D8691A /* Sources */,
+				7AC3998628D1873300D8691A /* Frameworks */,
+				7AC3998728D1873300D8691A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Basic Education Portal";
+			productName = "Basic Education Portal";
+			productReference = 7AC3998928D1873300D8691A /* Basic Education Portal */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AC3998128D1873300D8691A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7AC3998828D1873300D8691A = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 7AC3998428D1873300D8691A /* Build configuration list for PBXProject "Basic Education Portal" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AC3998028D1873300D8691A;
+			productRefGroup = 7AC3998A28D1873300D8691A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AC3998828D1873300D8691A /* Basic Education Portal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AC3998528D1873300D8691A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC399A428D1BF1C00D8691A /* LoginView.swift in Sources */,
+				7AC3999E28D18CB200D8691A /* Courses.swift in Sources */,
+				7AC3998D28D1873300D8691A /* main.swift in Sources */,
+				7AC399A828D3EE5B00D8691A /* Functions.swift in Sources */,
+				7AC399A028D18CC300D8691A /* StudentsTranscript.swift in Sources */,
+				7AC399A628D2FE1500D8691A /* MainMenuOptions.swift in Sources */,
+				7AC3999A28D1887200D8691A /* Students.swift in Sources */,
+				7AC3999C28D18C2D00D8691A /* Accounts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7AC3998E28D1873300D8691A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AC3998F28D1873300D8691A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7AC3999128D1873300D8691A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7AC3999228D1873300D8691A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AC3998428D1873300D8691A /* Build configuration list for PBXProject "Basic Education Portal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC3998E28D1873300D8691A /* Debug */,
+				7AC3998F28D1873300D8691A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC3999028D1873300D8691A /* Build configuration list for PBXNativeTarget "Basic Education Portal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC3999128D1873300D8691A /* Debug */,
+				7AC3999228D1873300D8691A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AC3998128D1873300D8691A /* Project object */;
+}
