@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Write two extensions for String 
+//•Extension1:
+//o Add an instance method which checks whether the string is palindrome or not. The signature is: func isPalindrome () -&gt; Bool
+//o Add an instance method which returns the reverse of the string func reverseIt()-&gt; String
+//• Extension2:
+//o Add an instance computed property which represents number of digits in the
+//string
+//o add an instance computed property which represents the uppercase version of the
+//string
+
+
+extension String {
+    
+    func isPalindrome() -&gt; Bool {
+        
+        var result = false
+        var backwardString = String(self.reversed())
+        
+        if self == backwardString
+        {
+            result = true
+        }
+        return result
+    }
+    
+    func reverseIt()-&gt; String{
+        
+        return String(self.reversed())
+    }
+}
+
+extension String {
+    
+    var counting: Int { return self.count }
+    
+    var uppercase: String {
+        return self.uppercased()
+    }
+    
+}
+
+
+func main(){
+    
+    let palindromeTest = "level"
+    print(palindromeTest.isPalindrome())
+    
+    let test2 = "shubhdeep"
+    print(test2.reverseIt())
+    
+    let test3 = "cornerstone"
+    print(test3.counting)
+    
+    let test4 = "bathinda"
+    print(test4.uppercase)
+}
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1259}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

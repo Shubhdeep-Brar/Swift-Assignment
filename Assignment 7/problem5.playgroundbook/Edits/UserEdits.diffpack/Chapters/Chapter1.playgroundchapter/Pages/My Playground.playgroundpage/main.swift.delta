@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Consider the following protocol: 
+//protocol SpecialStringProtocol  
+//{ 
+//    //it checks whether a given condi?on is met on the current string 
+//    func verifiableStringForACondi?on( _  condi?onPredicate: String-&gt;Bool) -&gt; Bool 
+//    
+//    /*it  checks  whether  the  string  is  a  double  repeated  string.  For  instance  abab  is  a  double 
+//     repeated because the ab is repeated 2 ?mes. Or AliAli is also double repeated.*/ 
+//    func repeatedString()-&gt; Bool 
+//} 
+//Now,  extend  the  String  type  to  have  the  above  requirements  defined  in  the  above  protocol  and 
+//also write some test scenarios to show how it works.
+
+
+protocol SpecialStringProtocol  
+{ 
+    //it checks whether a given condi?on is met on the current string 
+    func verifiableStringForACondition( _  conditionPredicate: (String) -&gt; Bool) -&gt; Bool
+    
+    /*it  checks  whether  the  string  is  a  double  repeated  string.  For  instance  abab  is  a  double 
+     repeated because the ab is repeated 2 ?mes. Or AliAli is also double repeated.*/ 
+    func repeatedString()-&gt; Bool 
+}
+
+extension String : SpecialStringProtocol{
+    
+    func verifiableStringForACondition(_ conditionPredicate: (String) -&gt; Bool) -&gt; Bool {
+        
+        return conditionPredicate(self)
+    }
+    
+    func repeatedString() -&gt; Bool {
+        
+        if self.count % 2 != 0 {
+            return false
+        }
+        
+        let numOfWords = self.count / 2
+        return self.prefix(numOfWords) == self.suffix(numOfWords)
+    }
+}
+
+func main(){
+    
+    print("Shubhdeep".verifiableStringForACondition({name in name == "Shubhdeep"}))
+    print("Singh".verifiableStringForACondition({lastname in lastname == "singh"}))
+    print("abcabc".repeatedString())
+    print("shubhshubh".repeatedString())
+    print("abcacbccc".repeatedString())
+}
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1833}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//
+//
+//define classes for Rectangle, Square and Circle to be child of the class Shape. 
+//The class shape has area and circumference.   
+//
+//• Define area and circumference to be computed properties of the class Shape. 
+//• Use override to override the computed properties of the classes Rectangle, Square and 
+//Circle. 
+//• Provide some example to show your implementation works. 
+
+
+class Shape {
+    
+    var area: Double {
+        get {return self.area}
+    }
+    
+
+    var circumference: Double {
+        get { return self.circumference } 
+        }
+    
+}
+    
+
+class Rectangle : Shape {
+    
+    var length: Double 
+    var breadth: Double
+    
+    init(length: Double, breadth: Double){
+        self.length = length
+        self.breadth = breadth
+    }
+    
+    override var area: Double {
+        get {
+            self.length * self.breadth
+        }
+    }
+    
+    override var circumference: Double {
+        get {2 * (self.length + self.breadth)}
+    }
+}
+
+class Square : Shape {
+    
+    var side: Double
+    
+    init(side: Double){
+        self.side = side
+    }
+    
+    override var area: Double {
+        get{ self.side * self.side }
+    }
+    
+    override var circumference: Double {
+        get{ 4 * self.side}
+    }
+}
+
+class Circle : Shape {
+    
+    var radius: Double
+    let PI: Double = 3.14
+    
+    init(radius: Double){
+        self.radius = radius
+    }
+    
+    override var area: Double {
+        
+        get { self.PI * (self.radius * self.radius)
+        }
+    }
+    override var circumference: Double {
+        
+        get { 2 * self.PI * self.radius
+        }
+    }
+}
+
+func main(){
+    
+    let rectangle1 = Rectangle(length: 8, breadth: 4)
+    let square1 = Square(side: 9)
+    let circle1 = Circle(radius: 5)
+    
+    print("Area of Rectangle is \(rectangle1.area)")
+    print("Perimeter of Rectangle is \(rectangle1.circumference)")
+    
+    print("Area of Square is \(square1.area)")
+    print("Perimeter of Square is \(square1.circumference)")
+    
+    print("Area of Circle is \(circle1.area)")
+    print("Circumference of Circle is \(circle1.circumference)")
+    
+}
+
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2121}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

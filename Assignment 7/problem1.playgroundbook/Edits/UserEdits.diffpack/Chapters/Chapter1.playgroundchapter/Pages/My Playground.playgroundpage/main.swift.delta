@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Problem 1:
+//Consider the following protocol:
+//Protocol SomeProtocol1
+//{
+//  var property1: Int {get}
+//  var property2: String {get set}
+//  var property3: (()-&gt;Int)? {get}
+//  sta?c var property4: String? {get set}
+//  sta?c method1(arg param: Int)
+//  method2(arg param: Int) -&gt; Int?
+//  muta?ng method3()-&gt; String?
+//}
+//Now
+//Create a class called Class1 which confirms to the above protocol. Make some arbitrary
+//implementations for the protocol’s requirements if needed.
+//Create a struct called Struct1 which confirms to the above protocol. Make some arbitrary
+//implementations for the protocol’s requirements if needed.
+//Create an enum called Enum1 which confirms to the above protocol. Make some arbitrary
+//implementations for the protocol’s requirements if needed.
+
+
+protocol SomeProtocol1 {
+    
+    var property1: Int {get}
+    var property2: String {get set}
+    var property3: (() -&gt; Int)? {get}
+    static var property4: String? {get set}
+    static func method1(arg param: Int)
+    func method2(arg param: Int) -&gt; Int?
+    mutating func method3 () -&gt; String?
+    
+    
+}
+
+class Class1 : SomeProtocol1 {
+    var property1: Int {
+        return 3
+    }
+    
+    var property2: String = ""
+    
+    var property3: (() -&gt; Int)? {
+        {return 5}
+    }
+    
+    static var property4: String? = "shubhdeep"
+    
+    static func method1(arg param: Int)
+    {
+        print("Result of method1: \(param)")
+    }
+    
+    func method2(arg param: Int) -&gt; Int? {
+        if param &gt; 9
+        {
+            return param
+        }
+        return nil
+    }
+    
+    func method3 () -&gt; String? {
+    self.property2 = "using property2"
+    return self.property2
+    }
+    
+}
+
+struct Struct1 : SomeProtocol1 {
+    var property1: Int 
+    
+    var property2: String 
+    
+    var property3: (() -&gt; Int)? 
+    
+    static var property4: String?
+    
+    static func method1(arg param: Int)
+    {
+        print("Result of method1: \(param)")
+    }
+    
+    func method2(arg param: Int) -&gt; Int? {
+        if param &gt; 9
+        {
+            return param
+        }
+        return nil
+    }
+    
+    mutating func method3 () -&gt; String? {
+        self.property2 = "using property2"
+        return self.property2
+    }
+}
+
+enum Enum1 : SomeProtocol1 {
+    
+    var property1: Int {
+        return 3
+    }
+    
+    var property2: String {
+        get
+    {return "shubhdeep"}
+    
+        set {}
+    }
+    
+    var property3: (() -&gt; Int)? {
+        {return 5}
+    }
+    
+    static var property4: String? = "shubhdeep"
+    
+    static func method1(arg param: Int)
+    {
+        print("Result of method1: \(param)")
+    }
+    
+    func method2(arg param: Int) -&gt; Int? {
+        if param &gt; 9
+        {
+            return param
+        }
+        return nil
+    }
+    
+    mutating func method3 () -&gt; String? {
+        self.property2 = "using property2"
+        return self.property2
+    }
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2887}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

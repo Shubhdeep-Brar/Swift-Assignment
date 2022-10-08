@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Consider the following protocols:
+//Protocol Protocol1 { 
+//    var property1: Int? 
+//} 
+//Protocol Protocol2 { 
+//    var property2: String 
+//} 
+//Protocol Protocol3 { 
+//    var property3: Int?-&gt;String 
+//} 
+//●Define an array called list1 whose elements are of a type (for instance a class) which 
+//conforms to all above protocol.  
+//●Using protocol composition, define a dictionary whose keys are of type String and the 
+//values are of a type that conforms to all above (three above) protocols. 
+
+protocol Protocol1 { 
+    var property1: Int? { get } 
+} 
+protocol Protocol2 { 
+    var property2: String { get }
+} 
+protocol Protocol3 { 
+    var property3: (Int?)-&gt;String  { get}
+} 
+
+
+class Elements: Protocol1, Protocol2, Protocol3 {
+    
+    var property1 : Int? {
+        return 7
+    }
+    
+    var property2 : String {
+        return "Shubhdeep"
+    }
+    
+    var property3: (Int?) -&gt; String {
+        return { i in i != nil ? String(i!) : "Input some Integer"}
+    }
+    
+    
+}
+
+func main(){
+    
+    
+    let list1 = [Elements()]
+    let dict : [String: Protocol1 &amp; Protocol2 &amp; Protocol3] = ["element" : Elements()]
+    
+    print(list1[0].property1!)
+    print(list1[0].property2)
+    print(list1[0].property3(8))
+    
+    print(dict["element"]!.property1!)
+    print(dict["element"]!.property2)
+    print(dict["element"]!.property3(8))
+}
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1365}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

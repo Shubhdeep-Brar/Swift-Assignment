@@ -20,29 +20,46 @@ enum AppleDevice {
     case iPhone8
     case iPhone7
     
-    var Price: String {
-        
-        get{ switch self {
-            
-        case .iPhoneXs:
-            return "$ 1000"
-        case .iphoneXR:
-            return "$ 1100"
-        case .iPhone8:
-            return "$ 800"
-        case .iPhone7:
-            return "$ 750"
-            
-        }
-        
-        }
-        
+    
+    switch AppleDevice{
+    case .iPhoneXs:
+        return "$1000"
     }
+//    var Price: String {
+//
+//        get{ switch self {
+//
+//        case .iPhoneXs:
+//            return "$ 1000"
+//        case .iphoneXR:
+//            return "$ 1100"
+//        case .iPhone8:
+//            return "$ 800"
+//        case .iPhone7:
+//            return "$ 750"
+//
+//        }
+//
+//        }
+//
+//    }
+//
+   
     
 }
 func main(){
     
-    let IphoneXsPrice = AppleDevice.iPhoneXs.Price
+//    let IphoneXsPrice = AppleDevice.iPhoneXs.Price
+//    print("\(IphoneXsPrice)")
+//
+//    let IphoneXRPrice = AppleDevice.iphoneXR.Price
+//    print("\(IphoneXRPrice)")
+//
+//    let Iphone8Price = AppleDevice.iPhone8.Price
+//    print("\(Iphone8Price)")
+    
+    let IphoneXsPrice = AppleDevice.iPhoneXs
     print("\(IphoneXsPrice)")
+    
 }
 main()

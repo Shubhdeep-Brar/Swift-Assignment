@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Imagine  you  design  a  mobile  view  or  a  webpage  which  contains  a  table  (Similar  to  the  picture 
+//below).  The  table  lists  the  students  in  our  program.  Create  an  application  using  the  delegate 
+//approach which given a list of students it create the table. At the minimum you need two classes 
+//View and Table.  
+//In order to create the table, the Table should know about the following information. Also Imagine 
+//the View has a list of students and it uses a Table object to show the list of Students.  
+//- The View class has the list of students. 
+//- The list of students is not fixed and could be arbitrary. In other word, if there are 10 
+//students in the list, then the table has 10 rows. If there are only 2 students in the list, then 
+//table shows 2 rows and so on. 
+//-
+//- The Table class is responsible for showing the information in the table. 
+//- The Table requires the following information to be able to show the information 
+//-
+//oStudent data. Each row represents one students 
+//oHow many students are in the list 
+//oThe fixed height of each row 
+//Ali David, 80
+//Peter Jackson, 79
+//Donald Trump, 81
+//William Chen, 76
+//Ana Leu, 82
+//- As mentioned, each row in the table represents an item which contains the following 
+//properties 1- firstName 2-LastName 3- GPA
+
+
+protocol ViewDelegate:AnyObject {
+    func provider()
+}
+
+class Row {
+    
+    var column: [String]
+    
+    init(column : [String]){
+        self.column = column
+    }
+}
+
+class Table:ViewDelegate {
+    
+    var rows: [Row]
+    
+    init(rows: [Row]){
+        self.rows = rows
+    }
+    
+    func provider() {
+        print("All items: \(rows.count)")
+        for row in rows {
+            print(row.column.joined(separator: ", "))
+        }
+    }
+}
+    
+    class View {
+        
+        weak var delegate: ViewDelegate?
+        
+        func unwrappingDelegate(){
+        guard let delegate = delegate else {
+        print("There's no delegate")
+        return
+        }
+            delegate.provider()
+        
+    }
+    }
+class Student{
+    
+    var firstName : String
+    var lastName : String
+    var gpa : Int
+    
+    init(firstName : String, lastName : String, gpa : Int){
+        self.firstName = firstName
+        self.lastName = lastName
+        self.gpa = gpa
+    }
+    
+    func convertToRow() -&gt; Row {
+        
+        return Row(column: ["\(self.firstName) \(self.lastName)", String(self.gpa)])
+    }
+}
+
+func main(){
+    
+    let ali = Student(firstName: "Ali", lastName: "David", gpa: 80)
+    let peter = Student(firstName: "Peter", lastName: "Jackson", gpa: 79)
+    let donald = Student(firstName: "Donald", lastName: "Trump", gpa: 81)
+    let william = Student(firstName: "William", lastName: "Chen", gpa: 76)
+    let ana = Student(firstName: "Ana", lastName: "Leu", gpa: 82)
+    
+    
+    let students = [ali, peter, donald, william, ana].map({student in student.convertToRow() })
+    let table1 = Table(rows: students)
+    let view1 = View()
+    view1.delegate = table1
+    view1.unwrappingDelegate()
+    
+    
+}
+
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 3067}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

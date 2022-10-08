@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Using an enum called StringError define the following 3 errors: • InvalidStringFormatForIntConversionError
+//• InvalidEmailFormatError
+//• NotValidPassword(numberNeeded: Int)
+//Write an extension for String and add the following methods:
+//• A method which converts the String to an Int if possible. The method will throws an error called InvalidStringFormatForIntConversion if it is not possible to convert the String to an integer. Only a string whose all characters are digits is allowed to be converted to an Int, otherwise it cannot be converted.
+//• A method which checks whether the String has a valid email format. A valid email format is like aaaa@b.c. If the string does not have a valid email format, the method will returns an error called InvalidEmailFormatError
+//• A method which checks wither the string is long enough to be a valid password. A valid password is at least 8 characters long. If the string is less than 8 characters, then the method will throw an error and indicates how many more characters is needed in order to have a valid password. For instance if the string has 6 characters, then it needs 2 more characters in order to be a valid password.
+//Design a class called TestExtension. The class has 3 static methods each of which test the above scenarios and handle the errors using try/catch block. The methods are
+//• func convertStringToInt (word: String) -&gt; Int?
+//• func isItAnEmail(word: String)-&gt; Boolean
+//• func validatePassword(password: String)-&gt; Boolean
+import Foundation
+enum StringError: Error {
+    
+    case InvalidStringFormatForIntConversionError
+    case InvalidEmailFormatError
+    case NotValidPassword(numberNeeded: Int)
+    
+}
+
+extension String {
+    
+    static let MINIMUM_PASSWORD_LENGTH = 8
+    
+    func convertToInt() throws -&gt; Int {
+        
+        guard let number = Int(self) else 
+        {
+            throw StringError.InvalidStringFormatForIntConversionError
+        }
+        return number
+    }
+    
+    func isEmailValid() throws -&gt; Bool {
+        
+        let emailRegex = "^[\\p{L}0-9!#$%&amp;'*+\\/=?^_`{|}~-][\\p{L}0-9.!#$%&amp;'*+\\/=?^_`{|}~-]{0,63}@[\\p{L}0-9-]+(?:\\.[\\p{L}0-9-]{2,7})*$"
+        
+        let emailValidationPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        
+        let isValid = emailValidationPredicate.evaluate(with: self)
+        
+        if isValid {
+            
+            return isValid
+        } else {
+            throw StringError.InvalidEmailFormatError
+        }
+    }
+    
+    func isValidPassword() throws -&gt; Bool {
+        
+        if self.count &gt;= String.MINIMUM_PASSWORD_LENGTH{
+            return true
+        }else {
+            
+            throw StringError.NotValidPassword(numberNeeded: String.MINIMUM_PASSWORD_LENGTH - self.count)
+        }
+    }
+}
+
+
+class TestExtension {
+    
+    
+    static func convertStringToInt(word: String) -&gt; Int? {
+        
+        do {
+            let number = try word.convertToInt()
+            return number
+        } catch 
+            StringError.InvalidStringFormatForIntConversionError {
+            return nil
+        } catch {
+            return nil
+        }
+    }
+    static func isItAnEmail(word: String)-&gt; Bool {
+    
+        do {
+            let email = try word.isEmailValid()
+            return email
+        } catch 
+            StringError.InvalidEmailFormatError {
+            return false
+        } catch {
+            return false
+        }
+    }
+    
+    static func validatePassword(password: String)-&gt; Bool {
+        
+        do {
+            let validPassword = try password.isValidPassword()
+            return validPassword 
+            
+        } catch
+            StringError.NotValidPassword(numberNeeded: let numberRequired) {
+            print("The password requires \(numberRequired) more characters")
+            return false
+        } catch {
+            print("Enter atleast 8 characters for the password")
+            return false 
+        }
+    }
+}
+
+
+func main() {
+    
+    
+    print(TestExtension.convertStringToInt(word: "67890")!)
+    print()
+    print(TestExtension.convertStringToInt(word: "shubhdeep"))
+    print()
+    print(TestExtension.isItAnEmail(word: "shubhdeep@gmail.com"))
+    print()
+    print(TestExtension.isItAnEmail(word: "abcdkpek"))
+    print()
+    print(TestExtension.validatePassword(password: "1234567890"))
+    print()
+    print(TestExtension.validatePassword(password: "12345"))
+}
+
+main()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 4421}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
